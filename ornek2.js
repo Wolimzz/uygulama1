@@ -21,6 +21,7 @@ export default function App() {
           <Card key={post.id} style={styles.card}>
             <Card.Content>
               <Text style={styles.title}>{post.title}</Text>
+              <Image src={post.image} />
               <Text style={styles.body}>{post.body}</Text>
             </Card.Content>
           </Card>
