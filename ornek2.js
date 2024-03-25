@@ -21,7 +21,7 @@ export default function App() {
           <Card key={post.id} style={styles.card}>
             <Card.Content>
               <Text style={styles.title}>{post.title}</Text>
-              <Image src={post.image} />
+              <Image source={{ uri: post.category.image }} style={styles.categoryImage} />
               <Text style={styles.body}>{post.body}</Text>
             </Card.Content>
           </Card>
@@ -48,5 +48,10 @@ const styles = StyleSheet.create({
   body: {
     marginTop: 8,
     fontSize: 16,
+  },
+    categoryImage: {
+    width: 100,
+    height: 100,
+    resizeMode: 'cover',
   },
 });
